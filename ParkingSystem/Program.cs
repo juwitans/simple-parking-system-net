@@ -19,7 +19,12 @@ class Program
         
             var parts = input.Split(' ', 2);
             var command = parts[0].ToLower();
-            var parameter = parts[1];
+            var parameter = " ";
+            
+            if (parts.Length > 1)
+            {
+                parameter = parts[1];
+            }
 
             //initializee
             var parkingSlots = commandPrompt.Create("10");
